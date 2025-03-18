@@ -6,11 +6,21 @@ A new Flutter project.
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Berikut adalah tampilan dari aplikasi:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Login Screen
+![Login Screen](assets/images/ss-1.png)
+
+### Home Screen
+![Home Screen](assets/images/ss-2.png)
+
+### RSVP Screen
+![RSVP Screen](assets/images/ss-3.png)
+
+### Tamu Screen
+![Tamu Screen](assets/images/ss-4.png)
+
+### Settings Screen
+![Settings Screen](assets/images/ss-5.png)
