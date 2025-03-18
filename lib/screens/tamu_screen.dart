@@ -17,14 +17,26 @@ class _TamuScreenState extends State<TamuScreen> {
       appBar: AppBar(
         title: Row(
           children: [
-            Image.asset('assets/images/logo-small.png', height: 30),
-            const SizedBox(width: 8),
-            const Text('LastInvitation'),
-            const Text(' Tamu', style: TextStyle(fontWeight: FontWeight.w300)),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Image.asset(
+                  'assets/images/logo-small.png',
+                  height: 40,
+                  color: Colors.white,
+                ),
+                const Text(
+                  'Tamu',
+                  style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                ),
+              ],
+            ),
           ],
         ),
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
+        centerTitle: false, // Ini penting untuk memastikan title di kiri
+        toolbarHeight: 80,
         elevation: 0,
       ),
       body: Column(
@@ -74,9 +86,18 @@ class _TamuScreenState extends State<TamuScreen> {
               decoration: InputDecoration(
                 hintText: 'Cari Tamu...',
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(50),
+                  borderSide: BorderSide(color: Colors.grey.shade400),
                 ),
-                contentPadding: const EdgeInsets.symmetric(horizontal: 16),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(50),
+                  borderSide: BorderSide(color: Colors.grey.shade400),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(50),
+                  borderSide: BorderSide(color: Colors.grey.shade500),
+                ),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 20),
               ),
             ),
           ),
@@ -95,17 +116,25 @@ class _TamuScreenState extends State<TamuScreen> {
 
           // Add buttons
           Padding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 30),
             child: Row(
               children: [
                 Expanded(
                   child: ElevatedButton.icon(
                     onPressed: () {},
                     icon: const Icon(Icons.contacts, size: 18),
-                    label: const Text('Tambah Dari Kontak'),
+                    label: const Text(
+                      'Tambah Dari Kontak',
+                      overflow: TextOverflow.visible,
+                      softWrap: false,
+                    ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.primary,
                       foregroundColor: Colors.white,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 12,
+                      ),
                     ),
                   ),
                 ),
