@@ -29,9 +29,11 @@ class BottomNavbar extends StatelessWidget {
                 Navigator.pushReplacementNamed(context, '/home');
               } else if (index == 1 && currentIndex != 1) {
                 Navigator.pushReplacementNamed(context, '/tamu');
-              } else if (index == 2 && currentIndex != 2) {
-                Navigator.pushReplacementNamed(context, '/rsvp');
               } else if (index == 3 && currentIndex != 3) {
+                // Ubah dari index 2 ke index 3
+                Navigator.pushReplacementNamed(context, '/rsvp');
+              } else if (index == 4 && currentIndex != 4) {
+                // Ubah dari index 3 ke index 4
                 Navigator.pushReplacementNamed(context, '/settings');
               }
             },
