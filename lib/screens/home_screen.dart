@@ -14,18 +14,26 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset('assets/images/logo-small.png', height: 30),
-            const SizedBox(width: 8),
-            const Text('LastInvitation'),
-            const Text(
-              ' Dashor',
-              style: TextStyle(fontWeight: FontWeight.w300),
+            Image.asset(
+              'assets/images/logo-small.png',
+              height: 40,
+              color: Colors.white,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 47), // Tambahkan margin kiri
+              child: const Text(
+                'Dashbor',
+                style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+              ),
             ),
           ],
         ),
         backgroundColor: AppColors.primary,
+        toolbarHeight: 80,
         foregroundColor: Colors.white,
         elevation: 0,
       ),
