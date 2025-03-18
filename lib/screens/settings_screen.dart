@@ -184,36 +184,58 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
         ),
         child: Stack(
-          alignment: Alignment.bottomCenter,
           children: [
-            // Gradient overlay untuk memastikan teks terlihat jelas
-            Container(
-              height: 50,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.transparent,
-                    AppColors.primary.withOpacity(0.8),
-                  ],
+            // Icon edit di tengah dengan background hijau
+            Center(
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: AppColors.primary,
+                  shape: BoxShape.circle,
                 ),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(8),
-                  bottomRight: Radius.circular(8),
-                ),
+                child: const Icon(Icons.edit, color: Colors.white, size: 20),
               ),
             ),
-            // Teks
-            Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: Text(
-                title,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
+
+            // Gradient dan teks di bagian bawah
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                children: [
+                  // Gradient overlay
+                  Container(
+                    height: 50,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Colors.transparent,
+                          AppColors.primary.withOpacity(0.8),
+                        ],
+                      ),
+                      borderRadius: const BorderRadius.only(
+                        bottomLeft: Radius.circular(8),
+                        bottomRight: Radius.circular(8),
+                      ),
+                    ),
+                  ),
+
+                  // Teks
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 12),
+                    child: Text(
+                      title,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
