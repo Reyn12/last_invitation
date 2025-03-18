@@ -11,16 +11,16 @@ This project is a starting point for a Flutter application.
 Berikut adalah tampilan dari aplikasi:
 
 ### Login Screen
-![Login Screen](assets/images/ss-1.png)
+![Login Screen](assets/images/ss-login.png)
 
 ### Home Screen
-![Home Screen](assets/images/ss-2.png)
+![Home Screen](assets/images/ss-home.png)
 
 ### RSVP Screen
-![RSVP Screen](assets/images/ss-3.png)
+![RSVP Screen](assets/images/ss-rsvp.png)
 
 ### Tamu Screen
-![Tamu Screen](assets/images/ss-4.png)
+![Tamu Screen](assets/images/ss-tamu.png)
 
 ### Settings Screen
-![Settings Screen](assets/images/ss-5.png)
+![Settings Screen](assets/images/ss-settings.png)
