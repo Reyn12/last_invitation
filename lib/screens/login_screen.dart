@@ -23,24 +23,10 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               // Logo
               Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'assets/images/logo.png', // Pastikan logo ada di assets
-                      width: 40,
-                      height: 40,
-                    ),
-                    const SizedBox(width: 10),
-                    const Text(
-                      'LastInvitation',
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFF2E7D32), // Warna hijau
-                      ),
-                    ),
-                  ],
+                child: Image.asset(
+                  'assets/images/logo-small.png',
+                  width: 262,
+                  height: 59,
                 ),
               ),
               const SizedBox(height: 50),
@@ -79,6 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       _obscurePassword
                           ? Icons.visibility
                           : Icons.visibility_off,
+                      color: const Color(0xFF34BF4C),
                     ),
                     onPressed: () {
                       setState(() {
@@ -107,7 +94,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   child: const Text(
                     'Login',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
